@@ -85,6 +85,7 @@ a {
 
 .between-sec {
   padding: 20rem 0;
+  text-align: center;
 }
 
 .between-sec-color {
@@ -161,6 +162,15 @@ header {
 /* HEADER - NAV TOOGLE ENDS */
 
 /* HEADER - NAV */
+#logo {
+  display: none;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 300;
+  border-bottom: 1px solid #fff;
+  margin-bottom: -5px;
+}
+
 .nav {
   width: 100%;
   height: 6rem;
@@ -379,3 +389,128 @@ footer h4 {
   font-family: 'Bebas Neue', sans-serif;
 }
 /* FOOTER ENDS */
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 769px) {
+  header,
+  .between-sec {
+    background-attachment: fixed;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .nav {
+    display: flex;
+    padding: 2rem 10rem 0;
+    justify-content: space-between;
+  }
+
+  #logo {
+    display: block;
+  }
+
+  .nav .overlay {
+    position: initial;
+    background: none;
+    opacity: initial;
+    transform: initial;
+  }
+
+  .nav .overlay ul {
+    flex-direction: row;
+    list-style: none;
+    margin-top: 2px;
+  }
+
+  .nav .overlay ul li a {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    margin-right: -1px;
+    padding: 0 2rem;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .center {
+    flex: 1;
+  }
+
+  .add-flex {
+    flex: 1;
+  }
+
+  .add-padding-right {
+    padding-right: 10rem;
+  }
+
+  .first {
+    order: 1;
+  }
+
+  .second {
+    order: 2;
+  }
+
+  .store {
+    min-height: 40rem;
+  }
+
+  .btn-info {
+    font-size: 1.8rem;
+  }
+
+  .main-text h1 {
+    transform: translateY(4rem);
+    opacity: 0;
+    animation: 0.5s fadeUp 0.5s forwards;
+  }
+
+  .main-text h2 {
+    transform: scale(2);
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+  }
+
+  .main-text .main-btn {
+    opacity: 0;
+    animation: 0.5s fade 1s forwards;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      transform: scale(2);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeUp {
+    0% {
+      transform: translateY(4rem);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+/* MEDIA QUERIES ENDS */
